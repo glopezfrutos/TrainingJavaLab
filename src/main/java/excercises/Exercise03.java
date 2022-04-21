@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class Exercise03 {
     public static void exercise() {
         Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-        int option;
 
         System.out.println("A continuación, se calculará el área de un círculo.");
         System.out.println("Por favor, introduzca el radio del círculo o 0 para volver:");

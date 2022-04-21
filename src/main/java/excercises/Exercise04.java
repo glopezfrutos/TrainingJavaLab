@@ -6,8 +6,6 @@ import java.util.Scanner;
 public class Exercise04 {
     public static void exercise() {
         Scanner scanner = new Scanner(System.in);
-        boolean exit = false;
-        int option;
 
         System.out.println("A continuación, se calculará el precio final de un producto.");
         try {
