@@ -77,31 +77,28 @@ public class Serie implements Entregable {
 
     @Override
     public String toString() {
-        return "Serie{" +
-                "titulo='" + titulo + '\'' +
-                ", temporadas=" + temporadas +
-                ", entregado=" + entregado +
-                ", genero='" + genero + '\'' +
-                ", creador='" + creador + '\'' +
-                '}';
+        return "Título: " + titulo +
+                "\nTemporadas: " + temporadas +
+                "\nEntregado: " + entregado +
+                "\nGenero: " + genero +
+                "\nCreador: " + creador;
     }
 
     @Override
-    public boolean entregar() {
-        return false;
+    public void entregar() {
+        this.entregado = true;
     }
 
     @Override
-    public boolean devolver() {
-        return false;
+    public void devolver() {
+        this.entregado = false;
     }
 
     @Override
     public boolean isEntregado() {
-        return false;
+        return entregado;
     }
 
-    @Override
     public void compareTo(Object a) {
 
     }

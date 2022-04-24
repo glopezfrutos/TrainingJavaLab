@@ -1,5 +1,8 @@
 package excercises.exercise18;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Videojuego implements Entregable {
 
 //    Crearemos una clase Videojuego con las siguientes características:
@@ -82,32 +85,25 @@ public class Videojuego implements Entregable {
 //    Sobrescribe los métodos toString.
     @Override
     public String toString() {
-        return "Videojuego{" +
-                "titulo='" + titulo + '\'' +
-                ", horas=" + horas +
-                ", entregado=" + entregado +
-                ", genero='" + genero + '\'' +
-                ", compania='" + compania + '\'' +
-                '}';
+        return "Titulo: " + titulo +
+                "\nHoras: " + horas +
+                "\nEntregado: " + entregado +
+                "\nGenero: " + genero +
+                "\nCompañía: " + compania;
     }
 
     @Override
-    public boolean entregar() {
-        return false;
+    public void entregar() {
+        this.entregado = true;
     }
 
     @Override
-    public boolean devolver() {
-        return false;
+    public void devolver() {
+        this.entregado = false;
     }
 
     @Override
     public boolean isEntregado() {
-        return false;
-    }
-
-    @Override
-    public void compareTo(Object a) {
-
+        return entregado;
     }
 }

@@ -22,6 +22,4 @@ X
 X
 (src/main/java/excercises/Exercise02.java,0\d\0d82475c15167816b3d49dd02034438645ce268d
 X
-(src/main/java/excercises/Exercise01.java,f\9\f95b91434a9ab2aeeb8cd06c8e3b817292f785b0
-X
 (src/main/java/excercises/Exercise08.java,e\4\e4022ce5ef370f3fc021ff6e3b7237750e2f5219
