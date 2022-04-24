@@ -41,7 +41,7 @@ public class JavaLabMenu {
                     case 14 -> Exercise14.exercise();
                     case 15 -> Exercise15.exercise();
                     case 16 -> Exercise16.exercise();
-//                    case 17 -> Exercise17.exercise();
+                    case 17 -> Exercise17.exercise();
 //                    case 18 -> Exercise18.exercise();
                     default -> System.out.println("Elija una opción entre 1 y 18 o 0 para salir");
                 }

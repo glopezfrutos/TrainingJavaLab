@@ -1,11 +1,11 @@
-package excercises;
+package excercises.exercise16;
 
 public class Persona {
     private String nombre;
     private Integer edad;
     private String DNI;
 
-    enum Sexo {H, M}
+    private enum Sexo {H, M}
 
     private Sexo sexo;
     private double peso;
@@ -88,7 +88,7 @@ public class Persona {
      * @param sexo A partir del sexo ingresado,
      * @return comprueba si es el parámetro es correcto, si es incorrecto devuelve H.
      */
-    private static Sexo comprobarSexo(String sexo) {
+    public static Sexo comprobarSexo(String sexo) {
         if (contains(sexo)) {
             if (Sexo.valueOf(sexo) == Sexo.M) {
                 return Sexo.M;
@@ -103,7 +103,6 @@ public class Persona {
                 return true;
             }
         }
-
         return false;
     }
 

@@ -1,5 +1,7 @@
 package excercises;
 
+import excercises.exercise16.Persona;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -38,7 +40,7 @@ public class Exercise16 {
             double alturaPepita = 2;
             persona3AllDefault.setNombre("Pepita");
             persona3AllDefault.setEdad(edadPepita);
-            persona3AllDefault.setSexo(Persona.Sexo.M);
+            persona3AllDefault.setSexo(Persona.comprobarSexo("M"));
             persona3AllDefault.setPeso(pesoPepita);
             persona3AllDefault.setAltura(2);
             System.out.println("\n * Persona registrada (método 3): *\n" +
