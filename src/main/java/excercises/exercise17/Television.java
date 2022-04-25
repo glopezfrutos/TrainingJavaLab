@@ -1,27 +1,59 @@
 package excercises.exercise17;
 
+/**
+ * Clase Televisión del ejercicio 17
+ */
 public class Television extends Electrodomestico {
+    /**
+     * Resolución
+     */
     private double resolucion;
+
+    /**
+     * Tiene sintonizador TDT?
+     */
     private boolean sintonizadorTDT;
+
+    /**
+     * Resolución por defecto (constante)
+     */
     final double resolucionDef = 20;
+
+    /**
+     * Sintonizador TDT por defecto (constante)
+     */
     final boolean sintonizadorTDTDef = false;
 
-    //    Los constructores que se implementarán serán:
-    //    Un constructor por defecto.
+    /**
+     * Constructor con todos los valores por defecto.
+     */
     public Television() {
         this.resolucion = resolucionDef;
         this.sintonizadorTDT = sintonizadorTDTDef;
     }
 
-    //    Un constructor con el precio y peso. El resto por defecto.
+    /**
+     * Constructor con todos los valores por defecto, excepto:
+     *
+     * @param precioBase Precio base
+     * @param peso       y Peso
+     */
     public Television(double precioBase, double peso) {
         super(precioBase, peso);
         this.resolucion = resolucionDef;
         this.sintonizadorTDT = sintonizadorTDTDef;
     }
 
-    //    Un constructor con la resolución, sintonizador TDT y el resto de atributos heredados.
-    //    Recuerda que debes llamar al constructor de la clase padre.
+    /**
+     * Contructor con todos los valores parametrizados:
+     *
+     * @param precioBase        Precio base
+     * @param color             Color
+     * @param consumoEnergetico Consumo energético
+     * @param peso              Peso
+     * @param resolucion        Resolución
+     * @param sintonizadorTDT   y si tiene sintonizador TDT
+     */
     public Television(double precioBase, String color, char consumoEnergetico, double peso,
                       double resolucion, boolean sintonizadorTDT) {
         super(precioBase, color, consumoEnergetico, peso);
@@ -29,23 +61,34 @@ public class Television extends Electrodomestico {
         this.sintonizadorTDT = sintonizadorTDT;
     }
 
-    //    Los métodos que se implementara serán:
-    //    Método get de resolución y sintonizador TDT.
+    /**
+     * Getter
+     *
+     * @return Resolución
+     */
     public double getResolucion() {
         return resolucion;
     }
 
+    /**
+     * Getter
+     *
+     * @return Tiene sintonizador TDT?
+     */
     public boolean isSintonizadorTDT() {
         return sintonizadorTDT;
     }
 
-    //   precioFinal(): si tiene una resolución mayor de 40 pulgadas, se incrementara el precio un
-    //   30% y si tiene un sintonizador TDT incorporado, aumentara 50 €. Recuerda que las condiciones
-    //   que hemos visto en la clase Electrodomestico también deben afectar al precio.
+    /**
+     * @return Devuelve el precio final
+     */
     public double precioFinal() {
         return super.precioFinal() * precioPorResolucion() + precioPorSintonizador();
     }
 
+    /**
+     * @return Devuelve el precio según la resolución
+     */
     private double precioPorResolucion() {
         if (this.resolucion > 40) {
             return 1.3;
@@ -53,6 +96,9 @@ public class Television extends Electrodomestico {
         return 1;
     }
 
+    /**
+     * @return Devuelve el precio según si tiene sintonizador
+     */
     private double precioPorSintonizador() {
         if (this.sintonizadorTDT) {
             return 50;

@@ -5,10 +5,17 @@ import excercises.exercise16.Persona;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Ejercicio 16
+ */
 public class Exercise16 {
+    /**
+     * Submenú para pedir al usuario los parámetros para instanciar los Objetos Persona.
+     */
     public static void exercise() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("* Ejercicio 16 - Personas *");
 
+        Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("*** Registro de personas ***" +
                     "\nA continuación se le pedirán datos de la persona a ingresar");
@@ -51,13 +58,24 @@ public class Exercise16 {
         }
     }
 
+    /**
+     * @param persona Dado un objeto Persona,
+     * @param peso    un peso,
+     * @param altura  una altura
+     * @param edad    y una edad
+     * @return devuelve un String con toda la información.
+     */
     public static String infoPersona(Persona persona, double peso, double altura, int edad) {
         return Persona.toString(persona) +
                 "\n IMC: " + infoIMC(peso, altura) +
                 "\n Es mayor de edad?: " + infoEsMayor(edad);
     }
 
-//    Devuelve -1 (peso ideal), 0 (debajo de su peso ideal) o 1 (sobrepeso).
+    /**
+     * @param peso   Dado un peso
+     * @param altura y una altura
+     * @return devuelve un String con la información del IMC
+     */
     public static String infoIMC(double peso, double altura) {
         if (Persona.calcularIMC(peso, altura) == -1) {
             return "debajo de su peso ideal";
@@ -68,6 +86,10 @@ public class Exercise16 {
         return "sobrepeso";
     }
 
+    /**
+     * @param edad Dada una edad
+     * @return devuelve "Sí" o "No" según sea mayor o menor de edad
+     */
     public static String infoEsMayor(int edad) {
         if (Persona.esMayorDeEdad(edad)) {
             return "Sí";

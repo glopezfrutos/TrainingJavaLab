@@ -1,25 +1,3 @@
 
-X
-(src/main/java/excercises/Exercise06.java,1\8\18cc009f015dc1897d71b6e198f72a5cdf7cffab
-X
-(src/main/java/excercises/Exercise07.java,d\1\d17ac39cfbe85687c40b8659a902a47d9e5e8d6f
-X
-(src/main/java/excercises/Exercise09.java,0\d\0d9dac18c337ec563f9f25262b72b7842856491f
-X
-(src/main/java/excercises/Exercise10.java,b\2\b2f633e9095e19bcf57af75352df5d2dcd673147
-X
-(src/main/java/excercises/Exercise11.java,0\1\010bcc52cd5bd0a488bc6fb8bf19173cd43a4fc1
-X
-(src/main/java/excercises/Exercise12.java,8\a\8a3d10c0122a9a74f78a41a6bb6e5a3cc9580369
-X
-(src/main/java/excercises/Exercise14.java,c\7\c7174e0c1a209affd55350cc520cbe47f427d3b0
-X
-(src/main/java/excercises/Exercise04.java,b\1\b19d1a1e8c138bb6ba38272c28c07acd3307ad29
-X
-(src/main/java/excercises/Exercise05.java,4\6\46a6b8f85390838633611e155d692c1109f7b8a3
-X
-(src/main/java/excercises/Exercise03.java,a\9\a9d0a1e7eb9ec6ee4ca3ac82425bea4e50768045
-X
-(src/main/java/excercises/Exercise02.java,0\d\0d82475c15167816b3d49dd02034438645ce268d
-X
-(src/main/java/excercises/Exercise08.java,e\4\e4022ce5ef370f3fc021ff6e3b7237750e2f5219
+V
+&src/main/java/javalab/JavaLabMenu.java,b\9\b92daffda53e7f82637f471a11159ebae37470d4

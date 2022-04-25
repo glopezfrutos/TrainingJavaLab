@@ -3,11 +3,18 @@ package excercises;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Ejercicio 2
+ */
 public class Exercise02 {
+    /**
+     * Submenú para pedir al usuario los parámetros y llamar al método check por consola.
+     */
     public static void exercise() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("* Ejercicio 2 - Compararación de números ingresados por el usuario *" +
+                "\nA continuación, se compararán los dos números que ingrese.");
 
-        System.out.println("A continuación, se compararán dos números que ingrese.");
+        Scanner scanner = new Scanner(System.in);
         try {
             System.out.println("Por favor, introduzca el primer número entero:");
             int firstNumber = scanner.nextInt();
@@ -15,31 +22,24 @@ public class Exercise02 {
             int secondNumber = scanner.nextInt();
             System.out.println(check(firstNumber, secondNumber));
         } catch (InputMismatchException e) {
-            System.out.println("ERROR, sólo se admiten números emterps.\nVolviendo al Menú Principal...\n");
+            System.out.println("ERROR, sólo se admiten números emteros.\nVolviendo al Menú Principal...\n");
             scanner.next();
         }
     }
 
+    /**
+     * @param firstNumber  A partir de un primer número y
+     * @param secondNumber un segundo número
+     * @return devuelve un String con el resultado de la comparación de ambos números.
+     */
     public static String check(int firstNumber, int secondNumber) {
-        System.out.println("Eligió los números " + firstNumber + " y " + secondNumber + ". ");
-        if (areEqual(firstNumber, secondNumber)) {
+        System.out.println("Comparando los números " + firstNumber + " y " + secondNumber + "...");
+        if (firstNumber == secondNumber) {
             return "Los dos números son iguales.\n";
         }
-        return greater(firstNumber, secondNumber);
-    }
-
-    public static boolean areEqual(int firstNumber, int secondNumber) {
-        return firstNumber == secondNumber;
-    }
-
-    public static String greater(int firstNumber, int secondNumber) {
-        if (isGreater(firstNumber, secondNumber)) {
+        if (firstNumber > secondNumber) {
             return "El primer número es mayor que el segundo.\n";
         }
         return "El segundo número es mayor que el primero.\n";
-    }
-
-    public static boolean isGreater(int firstNumber, int secondNumber) {
-        return firstNumber > secondNumber;
     }
 }

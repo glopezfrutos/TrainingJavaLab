@@ -1,14 +1,42 @@
 package excercises.exercise16;
 
+/**
+ * Clase Persona del ejercicio 16
+ */
 public class Persona {
+    /**
+     * Nombre
+     */
     private String nombre;
+
+    /**
+     * Edad
+     */
     private Integer edad;
+
+    /**
+     * DNI
+     */
     private String DNI;
 
+    /**
+     * enum con los valores posibles de Sexo
+     */
     private enum Sexo {H, M}
 
+    /**
+     * Sexo
+     */
     private Sexo sexo;
+
+    /**
+     * Peso
+     */
     private double peso;
+
+    /**
+     * Altura
+     */
     private double altura;
 
 
@@ -97,6 +125,10 @@ public class Persona {
         return Sexo.H;
     }
 
+    /**
+     * @param test dado un String
+     * @return devuelve si es un Sexo posible o no
+     */
     public static boolean contains(String test) {
         for (Sexo sex : Sexo.values()) {
             if (sex.name().equals(test)) {
@@ -138,22 +170,47 @@ public class Persona {
         return caracteres.charAt(resto);
     }
 
+    /**
+     * Setter de
+     *
+     * @param nombre Nombre
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Setter de
+     *
+     * @param edad Edad
+     */
     public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
+    /**
+     * Setter de
+     *
+     * @param sexo Sexo
+     */
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 
+    /**
+     * Setter de
+     *
+     * @param peso Peso
+     */
     public void setPeso(double peso) {
         this.peso = peso;
     }
 
+    /**
+     * Setter de
+     *
+     * @param altura Altura
+     */
     public void setAltura(double altura) {
         this.altura = altura;
     }

@@ -1,17 +1,33 @@
 package excercises.exercise18;
 
+/**
+ * Clase Serie del ejercicio 18
+ */
 public class Serie implements Entregable {
-    //        Crear una clase llamada Serie con las siguientes características:
-//        Sus atributos son título, numero de temporadas, entregado, género y creador.
+    /**
+     * Título
+     */
     private String titulo;
     private int temporadas;
+
+    /**
+     * Está entregado?
+     */
     private boolean entregado;
+
+    /**
+     * Género
+     */
     private String genero;
+
+    /**
+     * Creador
+     */
     private String creador;
 
-//        Los constructores que se implementarán serán:
-//        Un constructor por defecto.
-
+    /**
+     * Constructor con todos los valores por defecto.
+     */
     public Serie() {
         this.titulo = "";
         this.temporadas = 3;
@@ -20,8 +36,11 @@ public class Serie implements Entregable {
         this.creador = "";
     }
 
-//        Un constructor con el titulo y creador. El resto por defecto.
-
+    /**
+     * Constructor con todos los valores por defecto, excepto:
+     * @param titulo Título
+     * @param creador Creador
+     */
     public Serie(String titulo, String creador) {
         this.titulo = titulo;
         this.temporadas = 3;
@@ -30,8 +49,15 @@ public class Serie implements Entregable {
         this.creador = creador;
     }
 
-//        Un constructor con todos los atributos, excepto de entregado.
 
+    /**
+     * Constructor con todos los valores por parametrizados:
+     * @param titulo     Título
+     * @param temporadas Temporadas
+     * @param genero Género
+     * @param creador Creador
+     * excepto entregado
+     */
     public Serie(String titulo, int temporadas, String genero, String creador) {
         this.titulo = titulo;
         this.temporadas = temporadas;
@@ -40,41 +66,74 @@ public class Serie implements Entregable {
         this.creador = creador;
     }
 
-//        getters y setters
-
+    /**
+     * Getter
+     * @return Título
+     */
     public String getTitulo() {
         return titulo;
     }
 
+    /**
+     * Setter
+     * @param titulo Título
+     */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
+    /**
+     * Getter
+     * @return Temporadas
+     */
     public int getTemporadas() {
         return temporadas;
     }
 
+    /**
+     * Setter
+     * @param temporadas Temporadas
+     */
     public void setTemporadas(int temporadas) {
         this.temporadas = temporadas;
     }
 
+    /**
+     * Getter
+     * @return Género
+     */
     public String getGenero() {
         return genero;
     }
 
+    /**
+     * Setter
+     * @param genero Género
+     */
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
+    /**
+     * Getter
+     * @return Creador
+     */
     public String getCreador() {
         return creador;
     }
 
+    /**
+     * Setter
+     * @param creador Creador
+     */
     public void setCreador(String creador) {
         this.creador = creador;
     }
 
 
+    /**
+     * @return Devuelve un String con la información del objeto
+     */
     @Override
     public String toString() {
         return "Título: " + titulo +
@@ -84,22 +143,28 @@ public class Serie implements Entregable {
                 "\nCreador: " + creador;
     }
 
+    /**
+     * Settea verdadero al atributo Entregado
+     */
     @Override
     public void entregar() {
         this.entregado = true;
     }
 
+    /**
+     * Settea falso al atributo Entregado
+     */
     @Override
     public void devolver() {
         this.entregado = false;
     }
 
+    /**
+     * Getter
+     * @return Entregado
+     */
     @Override
     public boolean isEntregado() {
         return entregado;
-    }
-
-    public void compareTo(Object a) {
-
     }
 }

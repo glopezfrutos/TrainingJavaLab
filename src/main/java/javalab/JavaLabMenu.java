@@ -5,16 +5,21 @@ import excercises.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Clase principal, contiene el menú para ver ejecutar los ejercicios.
+ */
 public class JavaLabMenu {
+    /**
+     * Main, menú principal
+     * @param args none
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         int option;
 
-        // Menú
         while (!exit) {
-            System.out.println();
-            System.out.println("MENÚ PRINCIPAL");
+            System.out.println("\n*** MENÚ PRINCIPAL ***");
             System.out.println("Por favor, introduzca un número del 1 al 18 para ejecutar un ejercicio,");
             System.out.println("o introduzca 0 para salir.");
             // Comprueba si el usuario ingresó un número válido y llama al método correspondiente.

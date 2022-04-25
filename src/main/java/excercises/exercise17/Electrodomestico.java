@@ -1,21 +1,62 @@
 package excercises.exercise17;
 
+/**
+ * Clase Electrodoméstico del ejercicio 17
+ */
 public class Electrodomestico {
+    /**
+     * Precio base
+     */
     private double precioBase;
+
+    /**
+     * Precio base por defecto (constante)
+     */
     final double precioBaseDef = 100;
 
+    /**
+     * Valores posibles para color (constante)
+     */
     private enum Color {BLANCO, NEGRO, ROJO, AZUL, GRIS}
 
+    /**
+     * Color
+     */
     private Color color;
+
+    /**
+     * Color por defecto (constante)
+     */
     static final Color colorDef = Color.BLANCO;
 
+    /**
+     * Valores posibles para Consumo energético (constante)
+     */
     protected enum ConsumoEnergetico {A, B, C, D, E, F}
 
+    /**
+     * Consumo energético
+     */
     private ConsumoEnergetico consumoEnergetico;
+
+    /**
+     * Consumo energético por defecto (constante)
+     */
     final ConsumoEnergetico consumoEnergeticoDef = ConsumoEnergetico.F;
+
+    /**
+     * Peso
+     */
     private double peso;
+
+    /**
+     * Peso por defecto (constante)
+     */
     final double pesoDef = 5;
 
+    /**
+     * Constructor con todos los valores por defecto.
+     */
     public Electrodomestico() {
         this.precioBase = precioBaseDef;
         this.color = colorDef;
@@ -23,6 +64,12 @@ public class Electrodomestico {
         this.peso = pesoDef;
     }
 
+    /**
+     * Constructor con todos los valores por defecto, a excepción de
+     *
+     * @param precioBase Precio base
+     * @param peso       y Peso
+     */
     public Electrodomestico(double precioBase, double peso) {
         this.precioBase = precioBase;
         this.peso = peso;
@@ -30,6 +77,14 @@ public class Electrodomestico {
         this.consumoEnergetico = consumoEnergeticoDef;
     }
 
+    /**
+     * Contructor con todos los valores parametrizados:
+     *
+     * @param precioBase        Precio base
+     * @param color             Color
+     * @param consumoEnergetico Consumo energético
+     * @param peso              y Peso.
+     */
     public Electrodomestico(double precioBase, String color, char consumoEnergetico, double peso) {
         this.precioBase = precioBase;
         this.color = comprobarColor(color);
@@ -39,29 +94,49 @@ public class Electrodomestico {
 
 
     /**
-     * Getters
+     * Getter
+     *
+     * @return Precio base
      */
     public double getPrecioBase() {
         return precioBase;
     }
 
+    /**
+     * Getter
+     *
+     * @return Color
+     */
     public Color getColor() {
         return color;
     }
 
+    /**
+     * Getter
+     *
+     * @return Consumo energético
+     */
     public ConsumoEnergetico getConsumoEnergetico() {
         return consumoEnergetico;
     }
 
+    /**
+     * Getter
+     *
+     * @return Peso
+     */
     public double getPeso() {
         return peso;
     }
 
     /**
-     * Comprueba que la letra es correcta, sino es correcta usara la letra por defecto.
-     * Se invocará al crear el objeto y no será visible.
+     * @param letra dada una letra
      *
-     * @param letra
+     */
+
+    /**
+     * @param letra dada una letra
+     * @return Comprueba que sea un valor posible y la devuelve, sino devuelve la letra por defecto.
      */
     private ConsumoEnergetico comprobarConsumoEnergetico(char letra) {
         if (containsValidConsumo(String.valueOf(letra))) {
@@ -84,10 +159,8 @@ public class Electrodomestico {
     }
 
     /**
-     * comprueba que el color es correcto, sino lo es usa el color por defecto.
-     * Se invocará al crear el objeto y no será visible.
-     *
-     * @param color
+     * @param color dado un color
+     * @return Comprueba que sea un valor posible y la devuelve, sino devuelve el color por defecto.
      */
     private static Color comprobarColor(String color) {
         if (containsValidColor(color)) {
@@ -109,14 +182,17 @@ public class Electrodomestico {
         return false;
     }
 
+
     /**
-     * según el consumo energético, aumentara su precio, y según su tamaño, también.
-     * Esta es la lista de precios:
+     * @return Devuelve el precio final
      */
     public double precioFinal() {
         return precioPorConsumo() + precioPorPeso();
     }
 
+    /**
+     * @return Devuelve el precio según el consumo energético
+     */
     private double precioPorConsumo() {
         switch (this.consumoEnergetico) {
             case A -> {
@@ -140,6 +216,9 @@ public class Electrodomestico {
         }
     }
 
+    /**
+     * @return Devuelve el precio según el peso
+     */
     private double precioPorPeso() {
         if (this.peso < 20) {
             return 10;

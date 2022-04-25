@@ -1,25 +1,38 @@
 package excercises.exercise18;
 
-import java.util.Collections;
-import java.util.Comparator;
 
+/**
+ * Clase Videojuego del ejercicio 18
+ */
 public class Videojuego implements Entregable {
-
-//    Crearemos una clase Videojuego con las siguientes características:
-//
-//    Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
+    /**
+     * Título
+     */
     private String titulo;
+
+    /**
+     * Horas
+     */
     private int horas;
+
+    /**
+     * Está entregado?
+     */
     private boolean entregado;
+
+    /**
+     * Género
+     */
     private String genero;
+
+    /**
+     * Compañía
+     */
     private String compania;
 
-//    Por defecto, las horas estimadas serán de 10 horas y entregado false.
-//    El resto de atributos serán valores por defecto según el tipo del atributo.
-
-
-//    Los constructores que se implementaran serán:
-//    Un constructor por defecto.
+    /**
+     * Constructor con todos los valores por defecto.
+     */
     public Videojuego() {
         this.titulo = "";
         this.horas = 10;
@@ -28,7 +41,12 @@ public class Videojuego implements Entregable {
         this.compania = "";
     }
 
-//    Un constructor con el titulo y horas estimadas. El resto por defecto.
+    /**
+     * Constructor con todos los valores por defecto, excepto:
+     *
+     * @param titulo Título
+     * @param horas  y Horas estimadas
+     */
     public Videojuego(String titulo, int horas) {
         this.titulo = titulo;
         this.horas = horas;
@@ -37,7 +55,14 @@ public class Videojuego implements Entregable {
         this.compania = "";
     }
 
-//    Un constructor con todos los atributos, excepto de entregado.
+    /**
+     * Constructor con todos los valores por parametrizados:
+     *
+     * @param titulo   Título
+     * @param horas    Horas
+     * @param genero   Género
+     * @param compania Compañía
+     */
     public Videojuego(String titulo, int horas, String genero, String compania) {
         this.titulo = titulo;
         this.horas = horas;
@@ -46,43 +71,82 @@ public class Videojuego implements Entregable {
         this.compania = compania;
     }
 
-//    Los métodos que se implementara serán:
-//    Métodos get de todos los atributos, excepto de entregado.
+    /**
+     * Getter
+     *
+     * @return Título
+     */
     public String getTitulo() {
         return titulo;
     }
 
+    /**
+     * Getter
+     *
+     * @return Horas estimadas
+     */
     public int getHoras() {
         return horas;
     }
 
+    /**
+     * Getter
+     *
+     * @return Género
+     */
     public String getGenero() {
         return genero;
     }
 
+    /**
+     * Getter
+     *
+     * @return Compañía
+     */
     public String getCompania() {
         return compania;
     }
 
 
-//    Métodos set de todos los atributos, excepto de entregado.
+    /**
+     * Setter
+     *
+     * @param titulo Título
+     */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
+    /**
+     * Setter
+     *
+     * @param horas Horas
+     */
     public void setHoras(int horas) {
         this.horas = horas;
     }
 
+    /**
+     * Setter
+     *
+     * @param genero Género
+     */
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
+    /**
+     * Setter
+     *
+     * @param compania Compañía
+     */
     public void setCompania(String compania) {
         this.compania = compania;
     }
 
-//    Sobrescribe los métodos toString.
+    /**
+     * @return Devuelve un String con la información del objeto
+     */
     @Override
     public String toString() {
         return "Titulo: " + titulo +
@@ -92,16 +156,27 @@ public class Videojuego implements Entregable {
                 "\nCompañía: " + compania;
     }
 
+    /**
+     * Settea verdadero al atributo Entregado
+     */
     @Override
     public void entregar() {
         this.entregado = true;
     }
 
+    /**
+     * Settea falso al atributo Entregado
+     */
     @Override
     public void devolver() {
         this.entregado = false;
     }
 
+    /**
+     * Getter
+     *
+     * @return Entregado
+     */
     @Override
     public boolean isEntregado() {
         return entregado;

@@ -1,26 +1,36 @@
 package excercises;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Ejercicio 5
+ */
 public class Exercise05 {
+    /**
+     * Muestra por consola los números pares e impares del 0 al 100.
+     */
     public static void exercise() {
+        System.out.println("* Ejercicio 5 - Números con while *");
         int i = 0;
-        int index = 0;
-        int odd[] = new int[50];
+        ArrayList<Integer> odd = new ArrayList<Integer>();
+        ArrayList<Integer> pair = new ArrayList<Integer>();
         while (i <= 100) {
-            if (isOdd(i)) {
-                odd[index] = i;
-                index++;
+            if (i % 2 == 1) {
+                odd.add(i);
+            } else {
+                pair.add(i);
             }
             i++;
         }
-        System.out.println("A continuación, se muestran los números impares del 0 al 100:");
-        System.out.println(Arrays.toString(odd));
-    }
 
-    public static boolean isOdd(int number) {
-        return number % 2 == 1;
+        System.out.println(
+                "A continuación, se muestran los números pares del 0 al 100:\n" +
+                        pair + "\n" +
+                        "A continuación, se muestran los números pares del 0 al 100:\n" +
+                        odd
+        );
     }
 }

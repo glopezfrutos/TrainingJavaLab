@@ -5,15 +5,20 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Ejercicio 15
+ */
 public class Exercise15 {
+    /**
+     * Submenú con opciones.
+     */
     public static void exercise() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("* Ejercicio 15 - Menú de opciones *");
+                Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         int option;
 
-        // Menú
         while (!exit) {
-            System.out.println();
             System.out.println("****** GESTION CINEMATOGRAFICA ********\n" +
                     "1-NUEVO ACTOR\n" +
                     "2-BUSCAR ACTOR\n" +
@@ -23,11 +28,10 @@ public class Exercise15 {
                     "6- VER PELICULAS DE LOS ACTORES\n" +
                     "7 - VER CATEGORIA DE LAS PELICULAS DE LOS ACTORES\n" +
                     "8 - SALIR");
-            // Comprueba si el usuario ingresó un número válido y llama al método correspondiente.
             try {
                 option = scanner.nextInt();
                 switch (option) {
-                    case 1, 2, 3, 4, 5, 6, 7 -> Exercise15.exercise();
+                    case 1, 2, 3, 4, 5, 6, 7 -> System.out.println("Nada por aquí...");
                     case 8 -> {
                         System.out.println("Saliendo...");
                         exit = true;
